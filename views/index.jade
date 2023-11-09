@@ -1,6 +1,29 @@
 extends layout
 
 block content
-  form(class="form-floating")
-    input(type="text" class="form-control" id="user_name")
-    label(for="user_name") User Name 
+  div(class="container pt-3 pb-3")
+    div(class="row")
+      div(class="col-lg-6 ms-auto me-auto")
+        h2(class="mb-3") Get started today
+        form(class="needs-validation bg-body-tertiary p-5" id="form" novalidate )
+          div(class="form-floating mb-3")
+            input(type="text" class="form-control" id="username" placeholder="Username" required)
+            label(for="username") Username
+          div(class="row mb-3")
+            div(class="col")
+              div(class="form-floating")
+                input(type="number" class="form-control" id="age" placeholder="Age" required)
+                label(for="age") Age
+            div(class="col")
+              div(class="form-floating")
+                input(type="text" class="form-control" id="city" placeholder="City" required)
+                label(for="city") City
+            div(class="col")
+              div(class="form-floating")
+                input(type="tel" class="form-control" id="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required)
+                div(class="form-text") Format: 111-111-1111
+                label(for="phone") Phone  
+          div(class="form-floating mb-3")
+            input(type="email" class="form-control" id="email" placeholder="email" required)
+            label(for="email") Email
+          button(type="submit" class="btn btn-secondary" id="submit") Create Account
