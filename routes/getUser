@@ -1,0 +1,7 @@
+const express = require('express');
+const router = express.Router();
+
+//Get user
+router.get('/', (req, res, next) =>
+    res.send('sending user...')
+);
