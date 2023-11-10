@@ -29,7 +29,8 @@ $("document").ready(function () {
         alert("Account created successfully", "success");
     })
     .fail(function (error) {
-        console.error(error.responseJSON.message);
+        console.log('We are back at main');
+        //console.error(error);
         alertPlaceholder.empty();
         alert("Account creation failed", "danger");
     })

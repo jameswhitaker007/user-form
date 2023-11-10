@@ -5,6 +5,8 @@ const User = require("../public/javascripts/user");
 //Create user
 router.post("/", async function (req, res, next) {
   console.log("addUser route");
+  
+//Replace below with error handling code
   await User.create({
     user_name: req.body.user_name,
     user_age: req.body.user_age,
@@ -16,8 +18,25 @@ router.post("/", async function (req, res, next) {
     res.status(201);
   })
   .catch(function(e) {
-    console.error(e);
+    console.error(JSON.parse(e));
+    res.status(500).json(JSON.parse(e));
   })
 });
 
 module.exports = router;
+
+//Working on error handling
+try {
+    await User.create({
+        user_name: req.body.user_name,
+        user_age: req.body.user_age,
+        user_city: req.body.user_city,
+        user_phone: req.body.user_phone,
+        user_email: req.body.user_email,
+      });
+      console.log(data);
+      res.status(201).JSON(JSON.parse(data));
+} catch {
+    console.error(e);
+    res.status(500).json(JSON.parse(e));
+}
