@@ -35,6 +35,7 @@ $("document").ready(function () {
       if (result._id) {
         console.log("success");
         appendAlert("Account created successfully", "success");
+        localStorage.setItem("id", result._id)
       } else {
         console.log("failure");
         appendAlert("Account creation failed", "danger");
