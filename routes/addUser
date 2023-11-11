@@ -15,17 +15,18 @@ router.post("/", async function (req, res, next) {
     user_email: req.body.user_email,
   }).then(function (data) {
     console.log(data);
-    res.status(201);
+    res.status(201).json(data);
   })
   .catch(function(e) {
-    console.error(JSON.parse(e));
-    res.status(500).json(JSON.parse(e));
+    console.error(e);
+    res.status(500).json(e);
   })
 });
 
 module.exports = router;
 
 //Working on error handling
+/*
 try {
     await User.create({
         user_name: req.body.user_name,
@@ -39,4 +40,4 @@ try {
 } catch {
     console.error(e);
     res.status(500).json(JSON.parse(e));
-}
+}*/
