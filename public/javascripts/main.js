@@ -38,7 +38,13 @@ $("document").ready(function () {
         window.location.assign("/account");
       } else {
         console.log("failure");
-        appendAlert("Account creation failed", "danger");
+        appendAlert(
+          "Username not available. Please create a unique username.",
+          "danger"
+        );
+        $("#username").val("");
+        $("#username").focus();
+        $("#unique").css("display", "inline");
       }
     } catch (error) {
       console.error("error:", error);
