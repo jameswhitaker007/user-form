@@ -33,7 +33,7 @@ $("document").ready(function () {
       console.log("Success:", result);
       if (result._id) {
         console.log("success");
-        //appendAlert("Account created successfully", "success");
+        appendAlert("Account created successfully", "success");
         localStorage.setItem("id", result._id);
         window.location.assign("/account");
       } else {
