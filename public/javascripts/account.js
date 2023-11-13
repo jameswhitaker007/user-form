@@ -20,6 +20,7 @@ $("document").ready(async function () {
   userEmail = $("#user-email");
 
   try {
+    /*
     const response = await fetch("/getUser", {
       method: "POST",
       body: JSON.stringify({
@@ -28,7 +29,9 @@ $("document").ready(async function () {
       headers: {
         "content-type": "application/json; charset=UTF-8",
       },
-    });
+    });*/
+
+    const response = await fetch('/getUser/' + id);
 
     const result = await response.json();
     console.log("Success:", result);

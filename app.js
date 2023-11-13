@@ -31,7 +31,7 @@ app.use("/users", usersRouter);
 
 //Added code
 app.use("/addUser", addUserRouter);
-app.use("/getUser", getUserRouter);
+app.use("/getUser/", getUserRouter);
 app.use("/account", accountRouter);
 
 // catch 404 and forward to error handler
