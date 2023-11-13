@@ -1,6 +1,5 @@
 let alertPlaceholder;
 
-
 $("document").ready(function () {
   alertPlaceholder = document.getElementById("alert-placeholder");
   console.log(alertPlaceholder);
@@ -34,8 +33,9 @@ $("document").ready(function () {
       console.log("Success:", result);
       if (result._id) {
         console.log("success");
-        appendAlert("Account created successfully", "success");
-        localStorage.setItem("id", result._id)
+        //appendAlert("Account created successfully", "success");
+        localStorage.setItem("id", result._id);
+        window.location.assign("/account");
       } else {
         console.log("failure");
         appendAlert("Account creation failed", "danger");

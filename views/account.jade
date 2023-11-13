@@ -1,29 +1,33 @@
 extends layout
 
 block content
-    div(class="container col-lg-6 ms-auto me-auto border")
+    div(id="alert-placeholder") 
+    div(class="container col-lg-6 ms-auto me-auto")
         div(class="row")
-            span(class="border-bottom")
-                p 
+            p(class="fs-5")
+                b Your Account
+        div(class="row")
+            span(class="border-top border-end border-bottom border-start rounded-top p-4")
+                p(class="m-0") 
                     b Name
-                p #{user_name}
+                p(id="user-name" class="m-0")
         div(class="row")
-            span(class="border-bottom")
-                p
+            span(class="border-end border-bottom border-start p-4")
+                p(class="m-0")
                     b Age 
-                p #{user_age}
+                p(id="user-age" class="m-0")
         div(class="row")
-            span(class="border-bottom")
-                p 
+            span(class="border-end border-bottom border-start p-4")
+                p(class="m-0") 
                     b City 
-                p #{user_city}
+                p(id="user-city" class="m-0")
         div(class="row")
-            span(class="border-bottom")
-                p
+            span(class="border-end border-bottom border-start p-4")
+                p(class="m-0")
                     b Phone 
-                p #{user_phone}
+                p(id="user-phone" class="m-0")
         div(class="row")
-            span(class="border-0")
-                p 
+            span(class="border-end border-bottom border-start rounded-bottom p-4")
+                p(class="m-0")
                     b Email 
-                p #{user_email}
+                p(id="user-email" class="m-0")
