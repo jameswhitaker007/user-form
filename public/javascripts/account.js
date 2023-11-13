@@ -6,10 +6,10 @@ let userPhone;
 let userEmail;
 
 $("document").ready(async function () {
-    let id = localStorage.getItem("id");
-    if(id == undefined || id == "") {
-        window.location.assign('/');
-    }
+  let id = localStorage.getItem("id");
+  if (id == undefined || id == "") {
+    window.location.assign("/");
+  }
 
   alertPlaceholder = document.getElementById("alert-placeholder");
   username = $("#user-name");
@@ -20,18 +20,7 @@ $("document").ready(async function () {
   userEmail = $("#user-email");
 
   try {
-    /*
-    const response = await fetch("/getUser", {
-      method: "POST",
-      body: JSON.stringify({
-        id: id,
-      }),
-      headers: {
-        "content-type": "application/json; charset=UTF-8",
-      },
-    });*/
-
-    const response = await fetch('/getUser/' + id);
+    const response = await fetch("/getUser/" + id);
 
     const result = await response.json();
     console.log("Success:", result);

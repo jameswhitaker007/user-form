@@ -31,8 +31,9 @@ var server = http.createServer(app);
  */
 
 //Added code
-connect(uri).then(() => startServer())
-.catch((e) => console.error(e));
+connect(uri)
+  .then(() => startServer())
+  .catch((e) => console.error(e));
 
 function startServer() {
   server.listen(port);

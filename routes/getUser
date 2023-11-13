@@ -1,13 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 const User = require("../public/javascripts/user");
 
 //Get user
-router.get('/:id', async (req, res, next) => {
-    console.log(req.params.id);
-    const user = await User.findById(req.params.id).exec();
-    console.log(user);
-    res.status(200).json(user);
+router.get("/:id", async (req, res, next) => {
+  console.log(req.params.id);
+  const user = await User.findById(req.params.id).exec();
+  console.log(user);
+  res.status(200).json(user);
 });
 
 module.exports = router;
