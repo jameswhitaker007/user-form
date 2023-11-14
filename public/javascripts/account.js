@@ -26,11 +26,17 @@ $("document").ready(async function () {
     console.log("Success:", result);
     if (result._id) {
       console.log("success");
-      appendAlert("Account information retrieved", "success");
+      appendAlert(
+        "Your account information has been successfully retrieved!",
+        "success"
+      );
       buildUserData(result);
     } else {
       console.log("failure");
-      appendAlert("Error retrieving account information", "danger");
+      appendAlert(
+        "Oops! There was an error in retrieving your account information. Please try again.",
+        "danger"
+      );
     }
   } catch (error) {
     console.error("error:", error);

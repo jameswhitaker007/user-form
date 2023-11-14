@@ -5,6 +5,8 @@ User Form is a web application that enables users to input their information int
 
 ## Features
 - Easy-to-use data entry form
+- Advanced form input validation
+- Implementation of unique username requirement
 - Secure saving of user information into MongoDB
 - Display of stored data in real-time
 

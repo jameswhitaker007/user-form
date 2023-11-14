@@ -33,13 +33,16 @@ $("document").ready(function () {
       console.log("Success:", result);
       if (result._id) {
         console.log("success");
-        appendAlert("Account created successfully", "success");
+        appendAlert(
+          "Congratulations! Your account has been successfully created.",
+          "success"
+        );
         localStorage.setItem("id", result._id);
         window.location.assign("/account");
       } else {
         console.log("failure");
         appendAlert(
-          "Username not available. Please create a unique username.",
+          "Username already taken. Please choose a different, unique username.",
           "danger"
         );
         $("#username").val("");
